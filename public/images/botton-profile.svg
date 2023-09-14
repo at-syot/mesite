@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="198" height="65" viewBox="0 0 198 65">
+  <g id="Botton-profile" transform="translate(-97 -201)">
+    <g id="Group_63" data-name="Group 63" transform="translate(97 201)">
+      <g id="Rectangle_26" data-name="Rectangle 26" stroke="#a9c3d6" stroke-width="4">
+        <rect width="198" height="65" rx="32.5" stroke="none"/>
+        <rect x="2" y="2" width="194" height="61" rx="30.5" fill="none"/>
+      </g>
+    </g>
+    <text id="PROFILE" transform="translate(194 242)" fill="#a9c3d6" font-size="23" font-family="ExpresswayRg-Bold, Expressway" font-weight="700"><tspan x="-47.035" y="0">PROFILE</tspan></text>
+  </g>
+</svg>
