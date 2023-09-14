@@ -25,11 +25,11 @@ export default function ProfileTechSection() {
       <div className="basis-[50px]" />
 
       <div className="flex flex-col gap-3">
-        {contents.map(({ title, pics }) => (
-          <aside>
+        {contents.map(({ title, pics }, i) => (
+          <aside key={i}>
             <h4 className="font-semibold text-[14px]">{title}</h4>
-            {pics.map((pic) => (
-              <img src={pic} alt="" className="pt-2 pb-2 h-[50px]" />
+            {pics.map((pic, i) => (
+              <img key={i} src={pic} alt="" className="pt-2 pb-2 h-[50px]" />
             ))}
           </aside>
         ))}

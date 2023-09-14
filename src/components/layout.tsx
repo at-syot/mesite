@@ -5,7 +5,6 @@ import Sidebar from "@/src/components/sidebar";
 type Props = { title: string; gradientCls: string };
 export default function Layout(props: PropsWithChildren<Props>) {
   function getContainerCls() {
-    console.log(props);
     return "h-full flex flex-col bg-gradient-to-b " + props.gradientCls;
   }
 

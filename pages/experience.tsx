@@ -1,5 +1,6 @@
 import {ReactElement} from "react";
 import Layout from "../src/components/layout";
+import ContactActions from "@/src/components/ContactActions";
 
 type Placement = {
   year: string
@@ -51,9 +52,9 @@ export default function Experience() {
   return (
     <main className="flex flex-col gap-10">
       {
-        experiences.map((exp) => {
+        experiences.map((exp, i) => {
           return (
-            <aside className="flex flex-row gap-4 text-[14px]">
+            <aside className="flex flex-row gap-4 text-[14px]" key={i}>
               <div className="flex flex-col items-end font-bold basis-[110px] shrink-0">
                 <p>{exp.year}</p>
                 <p>{exp.at}</p>
@@ -69,6 +70,10 @@ export default function Experience() {
           )
         })
       }
+    
+      <div className="flex justify-center">
+        <ContactActions></ContactActions>
+      </div>
     </main>
   );
 }

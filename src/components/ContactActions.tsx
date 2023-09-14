@@ -2,16 +2,24 @@ export default function ContactActions() {
   return (
     <ul className="flex gap-3">
       <li>
-        <img src="images/Icon-upwork.svg" />
+        <a href="https://www.upwork.com/freelancers/~01126d93bb3e706e43">
+          <img src="images/Icon-upwork.svg" />
+        </a>
       </li>
       <li>
-        <img src="images/Icon-linkedin.svg" />
+        <a href="https://www.linkedin.com/in/todsapon-boontap-0a949097/">
+          <img src="images/Icon-linkedin.svg" />
+        </a>
       </li>
       <li>
-        <img src="images/Icon-microsoftoutlook.svg" />
+        <a href="mailto:aotse.todsapon@outlook.com">
+          <img src="images/Icon-microsoftoutlook.svg" />
+        </a>
       </li>
       <li>
-        <img src="images/Icon-call.svg" />
+        <a href="tel:+4378333578">
+          <img src="images/Icon-call.svg" />
+        </a>
       </li>
     </ul>
   );
