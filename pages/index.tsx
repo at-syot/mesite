@@ -20,20 +20,11 @@ export default function Profile() {
 
       <section>
         <p>
-          Voluptatum debitis sint corporis et omnis ab molestias vel. Et dolorem
-          recusandae vero est in libero voluptatem perspiciatis expedita. Odit
-          exercitationem non esse quisquam eligendi dolores autem quia omnis.
-          Eos eligendi distinctio labore esse architecto asperiores
-          reprehenderit. Neque impedit sit ea. Sint autem qui doloremque beatae
-          dignissimos quas occaecati voluptate. Est voluptatum nisi placeat.
-          Omnis aut iure et. Voluptatum debitis sint corporis et omnis ab
-          molestias vel. Et dolorem recusandae vero est in libero voluptatem
-          perspiciatis expedita. Odit exercitationem non esse quisquam eligendi
-          dolores autem quia omnis. Eos eligendi distinctio labore esse
-          architecto asperiores reprehenderit. Neque impedit sit ea. Sint autem
-          qui doloremque beatae dignissimos quas occaecati voluptate. Est
-          voluptatum nisi placeat. Omnis aut iure et.
+          Passioned in quality of code, more focus on programming paradigms & software design Software is software ... make it soft.
         </p>
+        <br />
+        <p>
+          Not much talking with new people, unnecessary funny with close one. Coding, Sport, Music are needed.</p>
       </section>
 
       <ProfileTechSection />
