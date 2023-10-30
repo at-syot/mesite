@@ -1,18 +1,21 @@
 import {PropsWithChildren} from "react";
 import Hamburger from "@/src/components/hamburger";
 import Sidebar from "@/src/components/sidebar";
+import { expressway } from "../font";
 
 type Props = { title: string; gradientCls: string };
 export default function Layout(props: PropsWithChildren<Props>) {
   function getContainerCls() {
-    return "relative h-full w-full overflow-hidden flex flex-col bg-gradient-to-b " + props.gradientCls;
+    let cls = "relative h-full w-full overflow-hidden flex flex-col bg-gradient-to-b" 
+    cls += " " + props.gradientCls;
+    cls += " " + expressway.className
+    return cls 
   }
-  
 
   return (
     <div className={getContainerCls()}>
       <nav className="flex flex-row p-6 justify-between items-center">
-        <img src="images/logo-black.png" className="h-[69px] w-[79px]" />
+        <a href="/"><img src="images/logo-black.png" className="h-[69px] w-[79px]" /></a>
         <Hamburger />
       </nav>
 

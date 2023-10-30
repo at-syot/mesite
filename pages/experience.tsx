@@ -12,11 +12,11 @@ type Info = { position: string; description: string }
 type Experience = Placement & Info
 const experiences: Experience[] = [
   {
-    year: "2021 - 2022",
+    year: "2021-22",
     at: "Accenture TH",
     city: "BKK",
     country: 'TH',
-    position: "SWE",
+    position: "Software engineer",
     description: "Be a part of Paotang project as iOS engineer, contributed wallet relevant features. After 3 months pass, I was chosen by a manager to build Golang team, regarding of an upcoming project which’s Digital Lending, so I was the first one." +
       "<br />" +
       "<br />" +
@@ -54,16 +54,14 @@ export default function Experience() {
       {
         experiences.map((exp, i) => {
           return (
-            <aside className="flex flex-row gap-4 text-[14px]" key={i}>
-              <div className="flex flex-col items-end font-bold basis-[110px] shrink-0">
-                <p>{exp.year}</p>
-                <p>{exp.at}</p>
-                <p>{exp.city}, {exp.country}</p>
+            <aside className="flex flex-col text-[22px]" key={i}>
+              <div className="flex items-baseline justify-between font-bold">
+                <p>{exp.at} </p>
+                <p className="font-thin italic text-[16px] pr-1">{exp.city}, {exp.country} {exp.year}</p>
               </div>
-              
               <div className="flex flex-col items-start gap-2">
-                <h4 className="font-bold">Position: {exp.position}</h4>
-                <div dangerouslySetInnerHTML={{ __html: exp.description }}>
+                <h4 className="font-bold text-[22px]">Position: {exp.position}</h4>
+                <div dangerouslySetInnerHTML={{ __html: exp.description }} className="text-[20px]">
                 </div>
               </div>
             </aside>

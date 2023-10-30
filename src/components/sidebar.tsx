@@ -1,15 +1,12 @@
-// import logoWhite from "@assets/images/logo-white.svg";
-// import closeIcon from "@assets/images/icon-close.svg";
-// import profileButton from "@assets/images/botton-profile.svg";
-// import expButton from "@assets/images/button-experiences.svg";
-
 import {useStore} from "@nanostores/react";
 import {$sidebarOpen, triggerSidebar} from "@/src/store/sidebar-ui";
 import {useEffect, useRef} from "react";
+import { expressway } from "../font";
 
 function getCls(open: boolean) {
   let cls =
     "absolute top-0 bottom-0 left-0 h-full flex flex-col bg-black transition-[width] duration-200 ease-in";
+  cls += " " + expressway.className
   cls += open ? " " + "w-full" : " " + "w-0";
   return cls;
 }
@@ -50,14 +47,14 @@ export default function () {
         </a>
       </nav>
       
-      <div className="flex flex-col gap-3 justify-center items-center duration-100 transition-[opacity]" ref={hrefButtonsRef}>
+      <div className="flex flex-col gap-4 justify-center items-center duration-100 transition-[opacity]" ref={hrefButtonsRef}>
         <a href="/">
-          <img src="images/botton-profile.svg" className="h-[96px] w-[198px]"/>
+          <img src="images/nav-btns/profile-btn.png" className="h-[70px] w-[214px]"/>
         </a>
         <a href="/experience">
           <img
-            src="images/button-experiences.svg"
-            className="h-[96px] w-[198px]"
+            src="images/nav-btns/exp-btn.png"
+            className="h-[70px] w-[214px]"
           />
         </a>
       </div>
