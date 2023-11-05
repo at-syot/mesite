@@ -1,13 +1,8 @@
-import techPlatformImg from "../assets/images/tech-platform.svg";
-import techLangImg from "../assets/images/tech-lang.svg";
-import techFrameworkImg_0 from "../assets/images/tech-framwork0.svg";
-import techFrameworkImg_1 from "../assets/images/tech-framwork1.svg";
-import techInfrastructureImg from "../assets/images/tech-infra.svg";
-import techToolImg from "../assets/images/tech-tool.svg";
+import { useScreenDevice } from "../useScreenDevice";
 
 const contents: { title: string; pics: string[] }[] = [
   { title: "PLATFORM", pics: ["images/tech-platform.svg"] },
-  { title: "PROGRAMING LANG", pics: ["images/tech-lang.svg"] },
+  { title: "PROGRAMING LANGUAGES", pics: ["images/tech-lang.svg"] },
   {
     title: "FRAMEWORK",
     pics: ["images/tech-framwork0.svg", "images/tech-framwork1.svg"],
@@ -17,9 +12,17 @@ const contents: { title: string; pics: string[] }[] = [
 ];
 
 export default function ProfileTechSection() {
+  const screenDevice = useScreenDevice()
+  return screenDevice === 'mobile' ? 
+    <ProfileTechSectionMobile /> :
+    <ProfileTechSectionDesktop />
+}
+ 
+function ProfileTechSectionMobile() {
   return (
     <section className="relative flex w-full">
-      <p className="rotate-[-90deg] absolute top-[73px] left-[-75px] text-[24px] font-bold text-[#547387]">
+      <p className="rotate-[-90deg] absolute top-[73px] left-[-75px]
+      text-[24px] font-bold text-[#547387]">
         TECHNOLOGIES
       </p>
       <div className="basis-[50px]" />
@@ -36,4 +39,22 @@ export default function ProfileTechSection() {
       </div>
     </section>
   );
+}
+ 
+function ProfileTechSectionDesktop() {
+  return (
+    <section className="flex gap-4 w-[80svw] max-w-[860px]">
+      <h3 className="text-[#547387] text-[34px]">TECHNOLOGIES</h3>
+      <div className="flex gap-6 flex-wrap">
+        {contents.map(({ title, pics }) => (
+          <aside>
+            <label className="text-[12px]">{title}</label>
+            {pics.map((pic, i) => (
+              <img key={i} src={pic} alt="" className="pt-2 pb-2 h-[50px]" />
+            ))}
+          </aside>
+        ))}
+      </div>
+    </section>
+  )
 }

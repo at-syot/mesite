@@ -1,17 +1,19 @@
+import {useRouter} from "next/router";
 import {useStore} from "@nanostores/react";
 import {$sidebarOpen, triggerSidebar} from "@/src/store/sidebar-ui";
 import {useEffect, useRef} from "react";
-import { expressway } from "../font";
+import {expressway} from "../font";
 
 function getCls(open: boolean) {
-  let cls =
-    "absolute top-0 bottom-0 left-0 h-full flex flex-col bg-black transition-[width] duration-200 ease-in";
+  let cls = `absolute top-0 bottom-0 left-0 h-full flex flex-col bg-black
+  transition-[width] duration-200 ease-in`;
   cls += " " + expressway.className
   cls += open ? " " + "w-full" : " " + "w-0";
   return cls;
 }
 
 export default function () {
+  const router = useRouter()
   const sidebarOpen = useStore($sidebarOpen);
   const navRef = useRef<HTMLDivElement>(null)
   const hrefButtonsRef = useRef<HTMLDivElement>(null)
@@ -37,6 +39,11 @@ export default function () {
     buttons.style.height = '0px'
     buttons.style.width = '0px'
   }, [sidebarOpen])
+
+  function onMenuClick(path: string) {
+    router.push(path)
+    triggerSidebar(false)
+  }
   
   return (
     <div className={getCls(sidebarOpen)}>
@@ -47,16 +54,17 @@ export default function () {
         </a>
       </nav>
       
-      <div className="flex flex-col gap-4 justify-center items-center duration-100 transition-[opacity]" ref={hrefButtonsRef}>
-        <a href="/">
+      <div className="flex flex-col gap-4 justify-center items-center
+      duration-100 transition-[opacity]" ref={hrefButtonsRef}>
+        <button onClick={() => onMenuClick('/')}>
           <img src="images/nav-btns/profile-btn.png" className="h-[70px] w-[214px]"/>
-        </a>
-        <a href="/experience">
+        </button>
+        <button onClick={() => onMenuClick('/experience')}>
           <img
             src="images/nav-btns/exp-btn.png"
             className="h-[70px] w-[214px]"
           />
-        </a>
+        </button>
       </div>
     </div>
   );
