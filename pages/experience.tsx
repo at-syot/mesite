@@ -12,43 +12,69 @@ type Info = { position: string; description: string }
 type Experience = Placement & Info
 const experiences: Experience[] = [
   {
+    year: "now",
+    at: "ZXSport",
+    city: "-",
+    country: 'TH',
+    position: "Software Engineer",
+    description: "Managed a Vue.js frontend team of three to successfully develop a bidding web application, achieving the launch of a 20-page project size within two months." +
+    "<br />" + 
+    "<br />" + 
+    "Implemented functional programming to enhance the development experience, fostering a more enjoyable and error-resistant coding environment."
+  },
+  {
     year: "2021-22",
     at: "Accenture TH",
     city: "BKK",
     country: 'TH',
-    position: "Software engineer",
-    description: "Be a part of Paotang project as iOS engineer, contributed wallet relevant features. After 3 months pass, I was chosen by a manager to build Golang team, regarding of an upcoming project which’s Digital Lending, so I was the first one." +
+    position: "Software Engineer",
+    description: "I started my journey with the Paotang project as an iOS engineer, focusing on developing wallet-related features. After three months, my manager entrusted me with the task of building a Golang team for an upcoming Digital Lending project. I was the first team member to come on board." +
       "<br />" +
       "<br />" +
-      "I had opportunity to start the project from beginning. Other developers join later so guiding, code structuring, team building also was a part of my role."
+      "This opportunity allowed me to lay the project's foundation from scratch. As other developers joined later, I took on the responsibility of guiding them, structuring the codebase, and fostering a cohesive team environment."
   },
   {
     year: "2020",
     at: "Hive venture",
     city: "BKK",
     country: 'TH',
-    position: "Fullstack",
-    description: "Joined as a fullstack developers for start up company. Project was kind of Grab, Food panda. They were developing a core monolith service with nodejs as a backend, but their outsource consultant convinced to change to kotlint springboot." +
+    position: "Fullstack Developer",
+    description: "I joined a startup company as a full-stack developer, and they were working on a project similar to Grab or Food Panda. Initially, they were building a core monolithic service with Node.js as the backend. However, due to the influence of an outsourced consultant, the decision was made to switch to Kotlin with Spring Boot." +
       "<br />" +
       "<br />" +
-      "So I had to learn kotlint language and rewrite the legacy codebase as kotlint springboot; despite there’s a communication issue whether it’s WFH company, a team member had different working time." +
+      "This change meant that I had to learn Kotlin and rewrite the existing legacy codebase using Spring Boot. This process was challenging, especially given the communication difficulties, as the company operated in a remote work-from-home environment, and team members had varying working hours." +
       "<br />" +
       "<br />" +
-      "CEO requested me to solve. I helped work-flow setting, organized daily standup meeting and set communication time period. Issues were gradually start to improve."
+      "Upon the CEO's request, I took the initiative to address these communication issues. I implemented a structured workflow, organized daily stand-up meetings, and established designated communication time slots. Over time, these measures led to a gradual improvement in addressing the communication challenges within the team."
   },
   {
-    year: "2018",
+    year: "2019",
     at: "KBTG",
     city: "BKK",
     country: 'TH,',
     position: "iOS Developer",
-    description: "Exciting project K-Plus in that time called Victoria, I joined as an iOS engineer. Slip page, home menu with user bank accounts and bit of setting feature are all my hand." +
+    description: "I joined the Victoria project, codenamed K-Plus, as an iOS engineer. I played a key role in designing and developing the home menu, which includes user bank account features and a set of essential settings." +
       "<br />" +
-      "<br />",
+      "<br />" +
+      "Built the K-Plus banking application serving 60 million users." +
+      "<br />" +
+      "<br />" +
+      "Optimized the slip screen feature for seamless rendering and introduced a user-friendly home menu with account features"
+  },
+  {
+    year: '2018',
+    at: "Santora Nakama",
+    city: "BKK",
+    country: "TH",
+    position: "Senior IOS Developer",
+    description: "Designed and developed an interactive live game show application while actively maintaining the codebase for ongoing improvements and stability" +
+    "<br />" +
+    "<br />" +
+    "Took a leadership role in mentoring and steering the existing iOS development team towards writing cleaner and more reusable code."
   },
   {
     year: '2016-18',
-    at: "Work from anywhere",
+    at: "Self Employed",
     city: "-",
     country: "TH",
     position: "Fulltime-freelance Developer",
@@ -63,7 +89,7 @@ const experiences: Experience[] = [
     description: "BananaCode want me to become one of team's member. Job: \"KLeasing\" i work is implement, code, fixing bug and publish new version to app store" +
     "<br />" + 
     "<br />" +
-    "For this company i work as full-time freelance"
+    "For this company i work as Full-time freelance"
   },
   {
     year: '2014',
@@ -71,13 +97,10 @@ const experiences: Experience[] = [
     city: "BKK",
     country: "TH",
     position: "iOS Developer",
-    description: "For this company I am just contractor, but I actually work at True Digital Plus company site. This company hire me as a consultant and create Framework for them. True Digital Plus(let’s call TDP) need Framework for their customer which customer are game develop company something. Let’s me explain about TDP, TDP is a game online and offline publisher that it. " + 
+    description: "BananaCode has offered me a position as a team member. In this role for the 'KLeasing' project, I am responsible for implementing, coding, resolving issues, and releasing new versions on the app store." + 
     "<br />" +
     "<br />" +
-    "TDP Framework: make for game developer if developer want to join or publish game in TDP name. developer need to implement their game and plugin TDP Framework." +
-    "<br />" +
-    "<br />" +
-    "TDP Framework feature: authentication for user and developer and this Framework offer Inapp-purchase that’s all I know in phase 1"
+    "In Phase 1, I focused on a feature within the TDP Framework, which included user and developer authentication. Additionally, this framework provided support for in-app purchases."
   },
   {
     year: '2013',
@@ -85,10 +108,10 @@ const experiences: Experience[] = [
     city: "BKK",
     country: "TH",
     position: "iOS Developer",
-    description: "First job is a big project about Financial service that create for purple bank in Thailand. I did not start earlier. I came to do next for 1.3 phase that’s form phase 3.0 – 4.3 which I do both iPhone and iPad because that time hasn’t developer enough for it. Finally, I was done." +
+    description: "In my initial project, I undertook a substantial assignment related to financial services for Purple Bank in Thailand. I joined the project from Phase 3.0 and continued through Phase 4.3, where I worked on both the iPhone and iPad applications due to a shortage of developers at the time. Eventually, I successfully completed my part of the project." +
     "<br />" +
     "<br />" +
-    "Mostly I do function call ATM/Branch that about searching ATM and Branch close your current-location and can search data for other city. This function will show data like a pin in your map. User can see detail for each data, Have enable AR function user can user this for seek ATM/Branch with camera device"
+    "My primary responsibility involves developing the ATM/Branch function, which allows users to search for nearby ATM and branch locations, as well as access data for locations in different cities. This function displays location details on a map, and users can access more information for each location. Additionally, I've worked on implementing an Augmented Reality (AR) feature, enabling users to use their device's camera for real-time location searches of ATM and branch locations."
   }
 ]
 
