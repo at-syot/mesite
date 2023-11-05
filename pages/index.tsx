@@ -5,10 +5,18 @@ import ProfileICare from "../src/components/ProfileICare";
 import ProfileProfessionalSkill from "../src/components/ProfileProfessionalSkill";
 import ContactActions from "../src/components/ContactActions";
 import ProfileCompany from "@/src/components/ProfileCompany";
+import { useScreenDevice } from "@/src/useScreenDevice";
 
 export default function Profile() {
+  const screenDevice = useScreenDevice()
+  function containerCls() {
+    let cls = "flex flex-col items-center gap-10 text-[20px]"
+    cls += screenDevice === 'mobile' ? "" : " px-24"
+    return cls
+  }
+
   return (
-    <main className="flex flex-col items-center gap-10 text-[20px]">
+    <main className={containerCls()}>
       <section className="flex flex-col items-center">
         <img src="images/todsapon_profilepage.png" alt="Todsapon's name" />
         <p className="text-[12px] text-[#547387] font-thin">
