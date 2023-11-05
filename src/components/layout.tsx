@@ -31,7 +31,7 @@ export default function Layout(props: PropsWithChildren<Props>) {
       </p>
   
       {/* content */}
-      <div className="grow p-6">
+      <div className="grow p-6 md:px-24 md:max-w-[1024px] md:mx-auto">
         {props.children}
       </div>
       
