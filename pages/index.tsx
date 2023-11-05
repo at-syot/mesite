@@ -14,7 +14,7 @@ export default function Profile() {
         <p className="text-[12px] text-[#547387] font-thin">
           Located in Toronto, ON Canada
         </p>
-        <a href="OatResumeCA.pdf" download className="text-white bg-black
+        <a href="aotse_todsapon_resume.pdf" download className="text-white bg-black
         font-bold p-2 pr-4 pl-4 rounded-3xl mt-6 hover:bg-[#547387]
         cursor-pointer">
           VISIT MY RESUME
