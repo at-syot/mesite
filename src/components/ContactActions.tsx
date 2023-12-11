@@ -17,7 +17,7 @@ export default function ContactActions() {
         </a>
       </li>
       <li>
-        <a href="tel:+4378333578">
+        <a href="tel:+1(437)833-3578">
           <img src="images/Icon-call.svg" />
         </a>
       </li>
